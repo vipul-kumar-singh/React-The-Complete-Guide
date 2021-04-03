@@ -1,2 +1,10 @@
 ### VS Code ###
 .vscode/
+
+### Node Modules ###
+03-base-features-and-syntax/node_modules
+
+### Distributions ###
+
+
+### Cache ###
