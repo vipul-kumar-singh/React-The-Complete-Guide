@@ -1,9 +1,8 @@
-// import React, { Component } from 'react';
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+// import React, { useState } from 'react';
 import './App.css';
 import Person from './Person/Person';
 
-/*
 class App extends Component {
   state = {
     persons: [
@@ -14,12 +13,12 @@ class App extends Component {
     otherState: 'Some other value',
   };
 
-  switchNameHandler = () => {
+  switchNameHandler = newName => {
     //console.log('Clicked');
     // DO NOT DO THIS : this.state.persons[0].name = 'Maximilian'
     this.setState({
       persons: [
-        { name: 'Maximilian', age: 28 },
+        { name: newName, age: 28 },
         { name: 'Manu', age: 29 },
         { name: 'Stephanie', age: 27 },
       ],
@@ -31,7 +30,10 @@ class App extends Component {
       <div className="App">
         <h1>Hello World</h1>
         <p>This is really working</p>
-        <button onClick={this.switchNameHandler}>Switch Name</button>
+        {/* Inefficient Method */}
+        <button onClick={() => this.switchNameHandler('Maximilian')}>
+          Switch Name
+        </button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
@@ -39,6 +41,7 @@ class App extends Component {
         <Person
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
+          click={this.switchNameHandler.bind(this, 'Maxi')}
         >
           My hobbies: Racing
         </Person>
@@ -58,10 +61,9 @@ class App extends Component {
 }
 
 export default App;
-*/
 
 // ################################# React Hooks #################################
-
+/*
 const App = props => {
   // useState returns two values, i) Current state, ii) Function to update it
   const [personsState, setPersonsState] = useState({
@@ -110,3 +112,4 @@ const App = props => {
 };
 
 export default App;
+*/
