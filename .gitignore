@@ -3,9 +3,11 @@
 Plan.txt
 
 ### Node Modules ###
-03-base-features-and-syntax/node_modules
+/**/node_modules/
 
 ### Distributions ###
-
+/**/dist/
 
 ### Cache ###
+/**/.cache/  
+/**/.parcel-cache
