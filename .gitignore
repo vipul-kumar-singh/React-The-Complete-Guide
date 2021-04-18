@@ -11,3 +11,7 @@ Plan.txt
 ### Cache ###
 /**/.cache/  
 /**/.parcel-cache
+/**/.eslintcache
+
+### Package-lock ###
+/**/package-lock.json
