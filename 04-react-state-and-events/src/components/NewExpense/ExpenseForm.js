@@ -24,10 +24,14 @@ const ExpenseForm = () => {
 
   const amountChangeHandler = (event) => {
     // setEnteredAmount(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value,
+    // });
+    setUserInput((prevState) => {
+        return {...prevState, enteredTitle: event.target.value};
     });
+    // React schedules the state updates, if you want to operate on latest states, then you should follow this approach.
   };
 
   const dateChangeHandler = (event) => {
