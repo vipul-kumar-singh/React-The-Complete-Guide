@@ -19,7 +19,7 @@ const HeaderCartButton = (props) => {
   }`;
 
   useEffect(() => {
-    if (cartCtx.items.length === 0) {
+    if (items.length === 0) {
       return;
     }
     setBtnisHighlighted(true);
