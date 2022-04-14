@@ -21,7 +21,6 @@ const QuoteDetail = () => {
   return (
     <Fragment>
       <HighlightedQuote text={quote.text} author={quote.author} />
-      <p>{params.quoteId}</p>
       <Route path={`/quotes/${params.quoteId}/comments`}>
         <Comments />
       </Route>
