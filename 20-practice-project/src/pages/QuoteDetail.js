@@ -1,6 +1,5 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useParams, Route, Link, useRouteMatch } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import Comments from '../components/comments/Comments';
 import HighlightedQuote from '../components/quotes/HighlightedQuote';
@@ -26,13 +25,11 @@ const QuoteDetail = () => {
   }, [sendRequest, quoteId]);
 
   if (status === 'pending') {
-    {
-      return (
-        <div className="centered">
-          <LoadingSpinner />
-        </div>
-      );
-    }
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   if (error) {
@@ -40,7 +37,7 @@ const QuoteDetail = () => {
   }
 
   if (!loadedQuote.text) {
-    return <p className="centered">No Quote Found</p>;
+    return <p>No quote found!</p>;
   }
 
   return (
