@@ -11,3 +11,7 @@
     - Press t to filter by a test name regex pattern.
     - Press Enter to trigger a test run.
     - Watch Usage: Press w to show more.
+
+## Available HTML Roles
+
+- https://www.w3.org/TR/html-aria/#docconformance
